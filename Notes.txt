@@ -1,0 +1,32 @@
+                                        ~~~~~(ROOT ONLY)~~~~~
+
+ANON SURF :- tor service
+	1. anonsurf start,
+	2. anonsurf stop,
+	3. anonsurf status
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+WIFITE :- wireless attack
+	// currently only WPS
+	
+	1. wifite
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AIRCRACK-NG :-
+	// converting the HANDSHAKE (.cap) file to HASH file (.hccap)
+	// keys will be the -> name of the HASH file i.e keys.hccap
+	// /home/sujoy/hs/helloWorld.cap -> PATH OF THE HANDSHAKE file (.cap)
+	
+	1.aircrack-ng -J keys /home/sujoy/hs/helloWorld.cap
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOHN THE RIPPER :-
+	// we need to convert the HASH file (.hccap) i.e < keys.hccap > into a TEXT file (.txt)
+	// hccap2john -> Is the command we are using to convert HASH file (.hccap) into TEXT file (.txt)
+	// /home/sujoy/hs/keys.hccap -> location of the HASH file (.hccap)
+	// > -> greater than symbol is also a command
+	// keys1.txt -> the text file we will be creating
+
+	1.hccap2john /home/sujoy/hs/keys.hccap > keys1.txt
+	
+	// john -> command to decrypt the txt file
+	<< issue not automated >>
+	2.john /home/sujoy/hs/keys1.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
